@@ -29,6 +29,6 @@ finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 ##qplot(finaldata$Global_active_power)
 
 ##Section 3; Create plot
-hist(finaldata$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
+plot(finaldata$date_and_time_as_POSIXlt, finaldata$Global_active_power, type="l", col="black", xlab="", ylab="Global Active Power (kilowatts)")
 
 
