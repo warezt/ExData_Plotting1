@@ -30,6 +30,7 @@ finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 
 ##Section 3; Create plot
 ##Initiate file
+##Link here https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/png.html
 png(filename = "plot4.png",width = 480, height = 480, units = "px",bg = "white")
 ##Create plot
 par(mfrow=c(2,2))
