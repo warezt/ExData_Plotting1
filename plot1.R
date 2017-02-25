@@ -19,5 +19,9 @@ if(length(unique(selecteddata$Date))!=2){"Wrong"}
 date_and_time<-paste(selecteddata$Date, selecteddata$Time, sep=" ")
 #Convert character vector to POSIXlt vector
 date_and_time_as_POSIXlt<-strptime(date_and_time,"%d/%m/%Y %H:%M:%S")
+#Add date and time in front of data for plot chart
+finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 
 
+library("ggplot2")
+> qplot(finaldata$Global_active_power)
