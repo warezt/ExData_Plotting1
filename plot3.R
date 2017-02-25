@@ -29,6 +29,16 @@ finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 ##qplot(finaldata$Global_active_power)
 
 ##Section 3; Create plot
+##Initiate file
+png(filename = "plot3.png",width = 480, height = 480, units = "px",bg = "white")
+##Create plot
+plot(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_1, type="l", col="black", xlab="", ylab="Energy sub metering")
+lines(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_2, col="red")
+lines(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_3, col="blue")
+legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty="solid")
+##Close developer
+dev.off()
+##Display
 plot(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_1, type="l", col="black", xlab="", ylab="Energy sub metering")
 lines(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_2, col="red")
 lines(finaldata$date_and_time_as_POSIXlt, finaldata$Sub_metering_3, col="blue")

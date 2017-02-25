@@ -29,7 +29,11 @@ finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 ##qplot(finaldata$Global_active_power)
 
 ##Section 3; Create plot
+##Initiate file
+png(filename = "plot1.png",width = 480, height = 480, units = "px",bg = "white")
+##Create plot
 hist(finaldata$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
-
-png(filename = "plot1.png",width = 480, height = 480, units = "px",bg = "transparent")
+##Close developer
 dev.off()
+##Display
+hist(finaldata$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")

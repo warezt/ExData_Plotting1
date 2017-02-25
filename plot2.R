@@ -29,6 +29,11 @@ finaldata<-cbind(date_and_time_as_POSIXlt,selecteddata)
 ##qplot(finaldata$Global_active_power)
 
 ##Section 3; Create plot
+##Initiate file
+png(filename = "plot2.png",width = 480, height = 480, units = "px",bg = "white")
+##Create plot
 plot(finaldata$date_and_time_as_POSIXlt, finaldata$Global_active_power, type="l", col="black", xlab="", ylab="Global Active Power (kilowatts)")
-
-
+##Close developer
+dev.off()
+##Display
+plot(finaldata$date_and_time_as_POSIXlt, finaldata$Global_active_power, type="l", col="black", xlab="", ylab="Global Active Power (kilowatts)")
